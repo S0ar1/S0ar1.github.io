@@ -53,7 +53,7 @@ margin-left: 7px;
 }
 .menu ul li a:hover{
     background: #F8F6F4;
-    color: black;
+    color: #C4DFDF;
 }
 
 .img{
@@ -105,7 +105,7 @@ margin-left: 7px;
     border-radius: 5px;
     /* border: none; */
     margin: 0 10px;
-    border: 2px solid white;
+    border: 2px solid #F8F6F4;
     font-size: 20px;
     font-weight: 500;
     padding: 5px 10px ;
@@ -119,11 +119,11 @@ margin-left: 7px;
     background: none;
 }
 .center .btns button:first-child:hover{
-    background: white;
-    color: black;
+    background: #F8F6F4;
+    color: #C4DFDF;
 }
 
 .center .btns button:last-child{
-    background: white;
-    color: black;
+    background: #F8F6F4;
+    color: #C4DFDF;
 }
