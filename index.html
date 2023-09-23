@@ -9,35 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <nav>
-        <div class="menu">
-            <div class="logo">
-                <a href="#">Home</a>
-            </div>
-            <ul>
-                <li><a href="https://space.bilibili.com/13833854?spm_id_from=333.1007.0.0" target="_blank">主页</a></li>
-                <li><a href="#">关于</a></li>
-                <li><a href="#">服务</a></li>
-                <li><a href="#">联系方式</a></li>
-                <li><a href="#">支持</a></li>
-            </ul>
-        </div>
-    </nav> -->
     <div class="nes-container is-dark with-title">
         <p class="title">Navigation</p>
-        <a href="#" class="nes-btn is-primary">Home</a>
-        <a href="#" class="nes-btn">About Me</a>
+        <a href="#" class="nes-btn is-primary" id="homeBtn">Home</a>
+        <a href="#" class="nes-btn" id="aboutBtn">About Me</a>
         <a href="#" class="nes-btn">Projects</a>
         <a href="#" class="nes-btn">Contact</a>
     </div>
-    <!-- <div class="img"></div>
-    <div class="center">
-        <div class="title">动手创造你自己的主页</div>
-        <div class="sub_title">CSS小案例</div>
-        <div class="btns">
-            <button>了解更多</button>
-            <button>建议</button>
-        </div>
-    </div> -->
+
+    <div class="nes-container with-title" id="contentContainer">
+        <p class="title">Welcome to My NES-style Homepage</p>
+        <p>Hey there! I'm [Your Name]. Welcome to my NES-inspired personal webpage.</p>
+        <button class="nes-btn is-primary">Get to Know Me</button>
+    </div>
+
+    <script>
+        document.getElementById('aboutBtn').addEventListener('click', function() {
+            // 使用 JavaScript 加载并显示 Markdown 文件内容
+            fetch('./CV.pdf')
+                .then(response => response.text())
+                .then(text => {
+                    // 将 Markdown 转换成 HTML 并更新内容容器
+                    document.getElementById('contentContainer').innerHTML = marked(text);
+                });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.1/marked.min.js"></script>
 </body>
 </html>
