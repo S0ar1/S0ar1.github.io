@@ -24,15 +24,27 @@
     </div>
 
     <script>
-        document.getElementById('aboutBtn').addEventListener('click', function() {
-            // 使用 JavaScript 加载并显示 Markdown 文件内容
-            fetch('./CV.pdf')
-                .then(response => response.text())
-                .then(text => {
-                    // 将 Markdown 转换成 HTML 并更新内容容器
-                    document.getElementById('contentContainer').innerHTML = marked(text);
-                });
-        });
+         document.getElementById('aboutBtn').addEventListener('click', function() {
+        // 使用 fetch 获取PDF文件
+        fetch('./CV.pdf')
+            .then(response => response.blob()) // 将响应转换成二进制数据
+            .then(blob => {
+                // 创建一个 URL 对象来引用二进制数据
+                const url = URL.createObjectURL(blob);
+                
+                // 使用 <embed> 元素来显示PDF
+                const embedElement = document.createElement('embed');
+                embedElement.src = url;
+                embedElement.type = 'application/pdf';
+                embedElement.style.width = '100%';
+                embedElement.style.height = '600px';
+
+                // 将 <embed> 元素添加到内容容器中
+                const contentContainer = document.getElementById('contentContainer');
+                contentContainer.innerHTML = '';
+                contentContainer.appendChild(embedElement);
+            });
+    });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.1/marked.min.js"></script>
 </body>
