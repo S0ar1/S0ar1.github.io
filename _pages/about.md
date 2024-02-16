@@ -6,8 +6,8 @@ subtitle: <a href='#'>University of Chinese Academy of Sciences</a>. Shanghai. C
 
 profile:
   align: right
-  image: figure.jpeg
-  image_circular: false # crops the image to make it circular
+  image: figure.jpg
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>555 your office number</p>
     <p>123 your address street</p>
