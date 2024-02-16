@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
 subtitle: <a href='#'>University of Chinese Academy of Sciences</a>. Shanghai. Contacts. Moto. Etc.
 
