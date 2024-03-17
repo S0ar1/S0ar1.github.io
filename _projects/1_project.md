@@ -1,18 +1,17 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Faster LLM
+description: Fast inference of LLM from branch prediction perspective
 img: assets/img/paper/branch_prediction/cover.pdf
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# Problem
+Modern language generation model is based on Autoregressive mechanism, which means we need to generate the word one by one. On the one hand, this Autoregressive mechanism fit the natural directivity of natural language just like when we read or write, when shows us a striking experience that finally mechine can talk with us like a real human being(even better) and we can't tell the difference between us and them. On the other hand, it <span style="color:red; font-weight:bold;">slow down </span>the speed of inference. That's the question we want to improve.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+
 
     ---
     layout: page
